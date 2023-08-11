@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font: normal 20pt Arial;
+    color: aliceblue;
+    background-color: rgb(34, 72, 128);
+    height: 100vh;
+    align-items: center;
+}
+
+#tel {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    box-shadow: 3px 3px 10px rgba(0, 14, 45, 0.638);
+    border-radius: 10px;
+}
+
+#result {
+    font-size: larger;
+    width: 400px;
+    border-radius: 10px;
+    text-align: end;
+    padding-right: 5%;
+}
+
+#grid {
+    margin-top: 2%;
+    display: grid;
+    grid-template: repeat(5, 100px ) / repeat(4, 100px);
+    gap: 10px;
+}
+
+#grid input[type="button"] {
+    box-shadow: 3px 3px 10px rgba(0, 14, 45, 0.638);
+    border: none;
+    font-size: larger;
+    border-radius: 10px;
+}
+
+#soma {
+    background-color: orange;
+    color: aliceblue;
+    grid-area: 4/4/6/4;
+}
+
+#zerar {
+    background-color: orange;
+    color: aliceblue;
+}
+
