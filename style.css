@@ -10,7 +10,6 @@ body {
 
 #tel {
     display: flex;
-    justify-content:center;
     height: 150px;
     box-shadow: 3px 3px 10px rgba(0, 14, 45, 0.638);
     border-radius: 10px;
@@ -25,11 +24,14 @@ body {
 }
 
 #previsao {
+    display: flex;
     font-size: larger;
+    width: 405px;
+    height: 150px;
     color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    right: 30.15%;
-    top: 27%;
+    position:absolute;
+    justify-content: end;
+    align-items: end;
 }
 
 #grid {

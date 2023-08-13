@@ -11,7 +11,7 @@ function inserir(x) {
         ponto = false
         return
     }
-    if(x == "(" && !["+" , "-" , "*" , "/","0"].includes(ultimo) ) {
+    else if((x == "("  || x == "(-") && !["+" , "-" , "*" , "/"].includes(ultimo) ) {
         d.value += "*"
         parenteses = true;
     }
@@ -32,9 +32,9 @@ function prever() {
 }
 
 function negativo() {
-    inserir("(-")
     parenteses = true
     ponto = false
+    inserir("(-")
 }
 
 function zerar() {
@@ -52,8 +52,8 @@ function inserirP() {
     if(["+" , "-" , "*" , "/", "("].includes(ultimo)){
         inserir(0)
     }
-    inserir(".")
     ponto = true
+    inserir(".")
 }
 
 function operadores(x) {
