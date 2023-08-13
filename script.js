@@ -1,4 +1,5 @@
 var d = document.getElementById('result')
+var p = document.getElementById('previsao')
 var parenteses = false
 var ponto = false
 
@@ -23,10 +24,15 @@ function inserir(x) {
     }else{
         d.value += x
     }
+    prever()
+}
+
+function prever() {
+    p.textContent = eval(d.value)
 }
 
 function negativo() {
-    d.value += "(-"
+    inserir("(-")
     parenteses = true
     ponto = false
 }
@@ -35,6 +41,7 @@ function zerar() {
     d.value = 0
     parenteses = false
     ponto = false
+    prever()
 }
 
 function inserirP() {
@@ -43,9 +50,9 @@ function inserirP() {
         return
     }
     if(["+" , "-" , "*" , "/", "("].includes(ultimo)){
-        d.value += 0
+        inserir(0)
     }
-    d.value += "."
+    inserir(".")
     ponto = true
 }
 
@@ -53,9 +60,9 @@ function operadores(x) {
     let ultimo = d.value.slice(-1)
     if(["+" , "-" , "*" , "/"].includes(ultimo)){
         d.value = d.value.slice(0, -1)
-        d.value += x
+        inserir(x)
     }else {
-        d.value += x
+        inserir(x)
     }
     ponto = false
 }
@@ -69,4 +76,5 @@ function somar() {
     parenteses = false
     ponto = false
     }
+    prever()
 }
